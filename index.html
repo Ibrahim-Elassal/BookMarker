@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/all.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body class="">
+    <a href="" target="_blank"></a>
+    <div class="container w-75">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="title pt-5 d-flex align-items-center justify-content-center">
+                    <span class="">
+                        <i class="fa-solid fa-bookmark fa-2xl"></i>
+                    </span> 
+                    <h1 class="ms-2 ">Bookmarker</h1>
+                </div>
+                <h4 class="mb-3">Bookmark your favorite sites</h4>
+                <div class="content d-flex flex-column align-items-center p-5 ">
+                    
+                    <label for="siteName">Site Name</label><br>
+                    <input  class=" my-3 w-75" type="text" id="siteName" placeholder="Bookmark Name"  > 
+                    <div class="alert alert-danger  d-none w-75" id="invalidName"> Name is Required </div>
+                    <div class="alert alert-danger  d-none w-75"  id="validName"> Url already Exist </div>
+  
+
+                    <label for="siteURL">Site URL</label><br>
+                    <input  class=" my-3 w-75" type="text" id="siteURL" placeholder="Website URL" > 
+                    <div class="alert alert-danger  d-none w-75" id="invalidUrl"> Url Field is Required </div>
+
+                    <button onclick="addBookmark ()" id="addUrl" class="btn my-3  w-75">Add Bookmark</button>
+                </div>
+                <!-- table -->
+                <div class=" mx-auto py-2">
+                    <input type="text" oninput="searchBookmarkName (this.value)" id="searchInput" placeholder="Search by name..." class="w-75  mx-auto my-3 ">
+                    <table class="table ">
+                        <thead>
+                            <th>Site Name</th>
+                            <th>Site Link</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody id="tableBody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+<script src="JS/main.js"></script>
+</body>
+</html>

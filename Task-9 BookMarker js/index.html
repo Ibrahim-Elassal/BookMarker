@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body class="-success">
+    <a href="" target="_blank"></a>
+    <div class="container ">
+        <div class="row">
+            <div class="col-12">
+                <div class="title py-5">
+                    <h3>Bookmarker</h3>
+                </div>
+                <hr>
+                <div class="content text-center p-5">
+                    <h4 class="mb-3">Bookmark your favorite sites</h4>
+                    <label for="siteName">Site Name</label><br>
+                    <input  class="form-control my-3" type="text" id="siteName" placeholder="Bookmark Name"  > 
+                    <div class="form-control text-bg-danger d-none" id="invalidName"> Name is Required </div>
+                    <div class="form-control text-bg-danger d-none" id="validName"> Url already Exist </div>
+  
+
+                    <label for="siteURL">Site URL</label><br>
+                    <input  class="form-control my-3" type="text" id="siteURL" placeholder="Website URL" > 
+                    <div class="form-control text-bg-danger d-none" id="invalidUrl"> Url Field is Required </div>
+
+                    <button onclick="addBookmark ()" id="addUrl" class="btn my-3  w-100 btn-primary">Add Bookmark</button>
+                </div>
+                <!-- table -->
+                <div class=" mx-auto py-2">
+                    <input type="text" oninput="searchBookmarkName (this.value)" id="searchInput" placeholder="Search by name..." class="w-75 form-control mx-auto my-3 ">
+                    <table class="table ">
+                        <thead>
+                            <th>Bookmark Name</th>
+                            <th>URL</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody id="tableBody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <hr>
+                    <div class="footer">
+                        © 2019 Bookmarker Inc.
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+<script src="JS/main.js"></script>
+</body>
+</html>
